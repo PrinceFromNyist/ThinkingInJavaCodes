@@ -82,6 +82,15 @@ ctrl+1
 13.在eclipse中选中工程右键，run as或者debug as，configuration那里有个source，然后添加
 源码后，打断点就可以追踪jdk源码了
 
+14.在eclipse中导入github上项目
+1）现在github上建立一个项目
+2）git clone github上项目地址（然后在本地生成一个新的目录）
+3）进入新的目录，然后把要上传到github上工程复制到这里面
+4）在该目录执行：git status,git add --all,git commit -m "注释"，git push然后输入github上的用户名及密码
+5）默认是master分支，你可以git checkout -b 新的分支名字
+备注：在eclipse直接import，从git上下载不方便，
+还是直接用import导入本地工程即可（导入java工程是导入general下的Existing Projects to workspace）
+
 
 ========编码类
 1.每一个类都尽量在一个包内，比较规范，【直接放在src根目录下不推荐】
@@ -120,6 +129,8 @@ ctrl+1
 
 13.方法的第一个字母为小写，不适用于构造方法
 而且方法也不一定有返回值类型，比如构造方法
+
+
 
 ==杂感
 1.看Thinking in java的效果和健身请私教一个道理，只是在课堂上学学，课下不练，时间长就忘了。
