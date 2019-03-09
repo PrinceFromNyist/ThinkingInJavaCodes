@@ -14,6 +14,7 @@ public class HelloWorld {
 	public static void main(String[] args) {
 		//在console打印一行‘Hello World！’
 		System.out.println("Hello World!");
+		System.out.println("新建立了分支，zengqiang.wang");
 	}
 
 }
