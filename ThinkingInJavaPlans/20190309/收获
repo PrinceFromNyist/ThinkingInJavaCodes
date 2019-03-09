@@ -1,0 +1,128 @@
+========工具类
+1.eclipse的工作空间
+一般新建立一个工作空间，然后打开建立工程，该工程的物理位置就在该工作空间下，
+但是如果你是在这个工作空间下导入已经存在的项目，一般在导入的时候有个‘将项目copy到该工作空间’，默认是不拷贝，
+是个指针，在该工作空间下操作的是另一个位置的项目【如果是maven工程的话，导入时没有拷贝选项】
+
+2.eclipse的working set【是个逻辑概念，和它相对的是Projects,一般删除working set，
+它下面的项目自动解除与该working set的关系】
+这是个逻辑概念，就是在eclipse可以以不同的视图展现，用于项目的分类管理
+
+3.Eclipse中常见的工程分类：
+1）普通工程
+2）java工程
+3）javaEE工程
+4）maven工程
+
+4.Eclipse中修改编辑器界面的背景色：默认是白色：
+window-preferences-general-editors-text editors-background color(取消system
+ default),然后选择一个自己喜欢的颜色
+
+5.在eclipse中使用javadoc输出自己的代码的api
+javadoc的使用场景：
+当我们的项目很大，编写了很多代码的时候，就需要生成一个标准的API文档，让后续的开发人员，
+或者合作者可以清晰的了解您方法的使用，那么如何将自己的项目生成API文档呢？
+
+方法：在eclipse菜单栏选中project-generate javadoc...【一般默认导出目录是桌面，和工程同结构，
+只是下面多了个doc目录，也可以不自定义目录，直接在原工程所在的目录下新建了一个doc目录】
+结果是htm形式的，入口时index.html【一般默认生成文档的类是pulic的，自己可以选择别的类型，不过
+eclipse一次只可以选择一种类型】
+
+6.eclipse中java工程的目录结构：
+以ThinkingInJavaActions工程为例：
+==ThinkingInJavaActions
+====.settings
+====bin（存放编译后的代码）
+====src（存放源代码）
+====.classpath
+====.project
+
+7.eclipse的workspace的结构【一个工作空间对应一套配置，比如你在该工作空间下配置的是自己的maven，
+换个工作空间就会变为eclipse自带的默认的maven】
+以C:\Users\Prince\Desktop\Thinking In Java\workspace为例：
+==workspace
+====.metadata
+====.recommenders
+====RemoteSystemsTempFiles
+====该工作空间下的项目名字
+
+8.在eclipse中每次创建java代码，都有一个模板，比如包含类名注释:作者，日期，类名等
+
+9.在eclipse设置注释模板：一般是针对类和方法【建立模板时可以参考java的源码的模板示例】
+window-preferences-java-code style-code templates-comments
+选中types和method，然后加入自己想要的注释即可。】
+比如我的类注释如下：
+/**
+ * @version:v1.0
+ * @Description:
+ * @author:${user}
+ * @date:${date} ${time} 
+ * ${tags}
+ */
+ 
+方法注释如下：
+/**
+ * @Description:
+ * ${tags}
+ */
+ 其中${}是系统变量，可以在图形化界面插入的
+ 
+
+该注释触发条件：在类或者方法前输入/**回车
+
+10.复制，移动一行代码：
+复制：ctrl+alt+方向键（与网易云音乐的音量加减快捷键冲突，而且桌面右键，要启用快捷键）
+移动：alt+方向键
+
+11.把新new的对象赋值给一个reference快捷键
+ctrl+1
+
+12.eclipse中方法可以折叠
+
+13.在eclipse中选中工程右键，run as或者debug as，configuration那里有个source，然后添加
+源码后，打断点就可以追踪jdk源码了
+
+
+========编码类
+1.每一个类都尽量在一个包内，比较规范，【直接放在src根目录下不推荐】
+不要建立裸奔的类,类名首字母大写
+
+2.包名命名规则：一般是域名反写，而且是小写
+比如www.qunar.com
+如果是在该公公司写代码，包名一般是com.qunar.www
+因为www比较普遍，常省略，结果是：com.qunar
+
+3.java doc注释：
+/**回车
+传统多行注释：/*回车
+
+4.java文件名一般和文件内被public修饰的类名一样
+
+5.一般一个文件存放一个类可读性强，否则一个文件好几个类，导致都写注释的话就显得很乱。
+
+6.java调试时因为涉及到jdk的源码，需要把jdk下的src.zip绑定下即可看到jdk的底层
+
+
+7.在java中万物皆对象可以在Object类体现，
+因为所有类都隐式集成了Object类
+
+8.在一个包下的java文件，java文件内不能包含同名的类，因为编译完成后bin目录下是以包名，然后类名形式出现的
+也就是一个java文件编译后，最少会生成一个类文件 
+
+9.另一个文件中定义的类，在该文件中没导入，也是可以用的，只要源文件在同一文件夹，
+编译后，class都是互相可见的
+
+10.任何类都有个默认构造方法（隐式），如果自己显式定义了构造方法，就不能调用默认构造方法了
+
+11.System类的方法：print，printf，println【都有overload】
+
+12.Void也是一个类
+
+13.方法的第一个字母为小写，不适用于构造方法
+而且方法也不一定有返回值类型，比如构造方法
+
+==杂感
+1.看Thinking in java的效果和健身请私教一个道理，只是在课堂上学学，课下不练，时间长就忘了。
+因此两者都要多学，更重要在与多练习
+
+
