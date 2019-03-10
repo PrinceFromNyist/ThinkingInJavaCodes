@@ -15,6 +15,7 @@ public class HelloWorld {
 		//在console打印一行‘Hello World！’
 		System.out.println("Hello World!");
 		System.out.println("新建立了分支，zengqiang.wang");
+		System.out.println("添加了.gitignore文件，用于提交时过滤某些文件");
 	}
 
 }
