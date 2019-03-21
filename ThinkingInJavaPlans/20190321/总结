@@ -3,3 +3,9 @@
 目录超链接在P13，
 2.import关键字的诞生
 为了使变量类型更简洁，
+
+3.java的修饰符
+private
+package access
+protected
+public 
